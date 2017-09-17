@@ -8,3 +8,10 @@ body{
   /*font-family:helvetica,sans-serif;*/
   /*color:black;*/
 }
+
+
+
+/*footer*/
+footer span:last-child{
+  float:right;
+}
