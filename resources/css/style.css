@@ -1,19 +1,19 @@
 /*fonts*/
-@font-face {
+@font-face{
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 700;
   src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGJkF8H8ye47wsfpWywda8og.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
-@font-face {
+@font-face{
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 400;
   src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v10/ODelI1aHBYDBqgeIAH2zlJbPFduIYtoLzwST68uhz_Y.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
-@font-face {
+@font-face{
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 300;
@@ -31,21 +31,17 @@ html{
 /*set base font*/
 body{
   font-family: "source sans pro",helvetica,sans-serif;
-  /*color:black;*/
+  line-height: 1.3;
   background-color: #f2f5f5;
   color: #4a4a4a;
+  /*stop natural breaks master*/
+  min-width: 983px;
 }
 
 /*class to make flex containers*/
-.flex {
+.flex{
   display: flex;
   align-items: center;
-}
-
-/*stop alignment to unknown stuff*/
-h1,
-h3{
-  display: block;
 }
 
 /*header*/
@@ -73,6 +69,8 @@ header ul{
   padding-right: 0.5rem;
 }
 header li{
+  font-weight: lighter;
+  font-size: 1.2rem;
   padding-right: 1rem;
 }
 
@@ -80,10 +78,16 @@ header li{
 .banner{
   background-color: #d8d8d8;
 }
+.banner .imgContainer{
+  /*width: 60%;*/
+  flex-basis: 60%;
+  padding: 3rem 2.5rem;
+}
 .textHold{
-  flex-direction: column;
-  text-align: left;
-  align-items: flex-start;
+  /*width: 40%; NO. USE FLEX BASIS*/
+  flex-basis: 40%;
+  flex-wrap: wrap;
+  /*min-width: 20rem;*/
 }
 h1{
   font-size: 2.7rem;
@@ -96,23 +100,124 @@ h3{
   text-align: left;
   padding: 1rem 0;
 }
-.banner .imgContainer{
-  width: 60%;
-  margin: 2rem 1.5rem;
-}
 .banner img{
   width: 100%;
-  height: auto;
+  /*min-width: 25rem;*/
 }
 .banner .button{
   font-weight: lighter;
+  letter-spacing: 0.05rem;
   font-size: 1.25rem;
   padding: 0.5rem 0;
   text-align: center;
   color: #fff;
   background-color: #4a4a4a;
-  width: 100%;
+  width: 80%;
+  max-width: 22rem;
+  margin-top: 1rem;
 }
+
+/*first area after banner*/
+.firstArea{
+  align-items: flex-start;
+}
+.firstArea .left{
+  /*do not use width for a flex container item, use the appropriate flex-basis*/
+  flex-basis: 60%;
+  padding: 3rem 2.5rem;
+}
+.firstArea img{
+  width: 100%;
+  /*min-width: 25rem;*/
+}
+h2{
+  font-size: 2.3rem;
+  font-weight: bold;
+  padding: 2rem 0 1.5rem;
+  text-align: left;
+}
+h4{
+  font-weight: lighter;
+}
+h5{
+  margin-top: 1.5rem;
+}
+.firstArea .right{
+  /*width: 40%;*/
+  flex-basis: 40%;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  border-left: 1px solid #d8d8d8;
+  align-self: stretch;
+  align-content: flex-start;
+}
+.firstArea .item{
+  padding: 1rem;
+  display: flex;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  margin: 0.1rem 0;
+  white-space: nowrap;
+}
+.right .imgContainer{
+  flex-basis: 35%;
+}
+.right img{
+  width: 100%;
+  min-width: 8rem;
+}
+.sidetxt{
+  flex-basis: 65%;
+  padding-left: 1.5rem;
+}
+.right h3{
+  padding: 0;
+}
+.right p{
+  padding: 0.5rem 0;
+  font-weight: lighter;
+}
+
+/*start learning section*/
+.startLearn{
+  padding: 2rem 4.5rem;
+  flex-direction: column;
+  background-color: #eaebec;
+}
+.startLearn h2:first-child{
+  padding-bottom: 1rem;
+}
+.startLearn h2,h3{
+  padding: 0;
+}
+.itemHold{
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.startLearn .item{
+  flex-basis: 30%;
+  margin: 1rem;
+  background-color: white;
+  min-height: 19rem;
+}
+.startLearn .item img{
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.item h3,
+.item p{
+  padding: 0 1rem;
+}
+.item p{
+  padding-top: 1.2rem;
+  color: #969696;
+  font-weight: lighter;
+  line-height: 1.5;
+}
+.item:first-child h3{
+  white-space: nowrap;
+}
+
 
 
 /*footer*/
