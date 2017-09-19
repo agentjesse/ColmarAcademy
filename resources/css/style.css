@@ -196,9 +196,10 @@ h5{
 }
 .startLearn .item{
   flex-basis: 30%;
+  min-width: 30%;
   margin: 1rem;
   background-color: white;
-  min-height: 19rem;
+  min-height: 22rem;
 }
 .startLearn .item img{
   width: 100%;
@@ -208,14 +209,28 @@ h5{
 .item p{
   padding: 0 1rem;
 }
+.item h3{
+  font-size: 1.5rem;
+}
 .item p{
   padding-top: 1.2rem;
   color: #969696;
   font-weight: lighter;
   line-height: 1.5;
 }
-.item:first-child h3{
-  white-space: nowrap;
+
+/*thesis section*/
+.thesis .left{
+  flex-basis: 60%;
+}
+.vidContain{
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+video{
+  width: 100%;
+}
+.thesis .right{
+  flex-basis: 40%;
 }
 
 
