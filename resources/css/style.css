@@ -35,7 +35,8 @@ body{
   background-color: #f2f5f5;
   color: #4a4a4a;
   /*stop natural breaks master*/
-  min-width: 983px;
+  width: 1200px;
+  margin:0 auto;
 }
 
 /*class to make flex containers*/
@@ -156,6 +157,7 @@ h5{
   display: flex;
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
   margin: 0.1rem 0;
   white-space: nowrap;
 }
@@ -180,7 +182,7 @@ h5{
 
 /*start learning section*/
 .startLearn{
-  padding: 2rem 4.5rem;
+  padding: 2rem 0;
   flex-direction: column;
   background-color: #eaebec;
 }
@@ -193,6 +195,8 @@ h5{
 .itemHold{
   flex-wrap: wrap;
   justify-content: center;
+  flex-basis: 100%;
+  padding: 0 3.5rem;
 }
 .startLearn .item{
   flex-basis: 30%;
@@ -220,22 +224,51 @@ h5{
 }
 
 /*thesis section*/
+.thesisTitle{
+  text-align: center;
+  padding: 2rem 0;
+}
 .thesis .left{
   flex-basis: 60%;
+  padding: 0 1.5rem;
 }
 .vidContain{
-  padding: 0 1.5rem 1.5rem 1.5rem;
+  padding-bottom: 1.5rem;
 }
 video{
   width: 100%;
 }
+.left h4{
+  padding: 0.5rem 0 2rem;
+}
 .thesis .right{
+  align-self: flex-start;
   flex-basis: 40%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.right img{
+  width: 100%;
+  height: auto;
+}
+.right .flex .flex{
+  flex-basis: 35%;
+  min-width: 9rem;
+  padding: 1rem;
+}
+.right .flex div:nth-child(2){
+  flex-basis: 65%;
+}
+.colorMe{
+  background-color: #d8d8d8;
 }
 
 
-
 /*footer*/
+footer{
+  padding: 1rem 1.5rem 3rem;
+  font-weight: lighter;
+}
 footer span:last-child{
   float:right;
 }
